@@ -9,9 +9,9 @@ import sqlite3
 import re
 import sys
 
-chatdata = r"resource/chat.mht"
-db_filename = r'resource/chat.db'
-schema_filename = r'resource/schema.sql'
+chatdata = r"resource/小黑的情怀.mht"
+db_filename = r'resource/小黑的情怀.db'
+schema_filename = r'schema.sql'
 
 # ##############################################################
 
@@ -32,7 +32,7 @@ def insertdata():
         print('Database exists, assume schema does, too.')
 
     print('Inserting data ... ')
-    with open(chatdata) as f:
+    with open(chatdata,encoding='utf-8') as f:
         soup = BeautifulSoup(f.read())
         script = soup.find_all('tr')
         print('待处理数据共:', len(script), '条 .......')
@@ -43,7 +43,7 @@ def insertdata():
         # #############################################
         # 你的主要代码在这里
         date = None
-        conn.execute('DELETE FROM chatdb')
+        # conn.execute('DELETE FROM chatdb')
         for i in script:
             try:
                 if not i.td.div:

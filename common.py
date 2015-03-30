@@ -1,7 +1,7 @@
 __author__ = 'sail'
 import sqlite3
 
-db_filename = 'chat.db'
+db_filename = r'resource/chat.db'
 
 
 def get_id( name=None):
