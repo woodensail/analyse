@@ -5,6 +5,7 @@ import s103
 import s104
 import s105
 
+
 ################################
 # 测    试
 ################################
@@ -41,14 +42,9 @@ def t_s105():
     s105.pandas()
 
 
-def test():
-    result = []
-    for i in range(4):
-        def t(num):
-            return num * i
-
-        result.append(t)
-    return result
+def t_s106():
+    import s106
+    s106.analyse()
 
 
 if __name__ == '__main__':
@@ -56,4 +52,5 @@ if __name__ == '__main__':
     # t_someonechat()
     # t_pet_phrase()
     # t_s104()
-    t_s105()
+    # t_s105()
+    t_s106()
