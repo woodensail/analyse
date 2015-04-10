@@ -47,10 +47,16 @@ def t_s106():
     s106.analyse()
 
 
+def t_s107():
+    import s107
+    s107.analyse()
+
+
 if __name__ == '__main__':
     # t_insertdata()
     # t_someonechat()
     # t_pet_phrase()
     # t_s104()
     # t_s105()
-    t_s106()
+    # t_s106()
+    t_s107()
