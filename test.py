@@ -44,12 +44,20 @@ def t_s105():
 
 def t_s106():
     import s106
+
     s106.analyse()
 
 
 def t_s107():
     import s107
+
     s107.analyse()
+
+def t_s108():
+
+    import s108
+
+    s108.analyse()
 
 
 if __name__ == '__main__':
@@ -59,4 +67,5 @@ if __name__ == '__main__':
     # t_s104()
     # t_s105()
     # t_s106()
-    t_s107()
+    # t_s107()
+    t_s108()

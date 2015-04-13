@@ -34,8 +34,8 @@ def analyse():
     df = pd.ExcelFile(r"resource/wxgzhdata.xlsx").parse(u"3月")
     df.insert(0, '标题', df['文章标题'])
     df = df.fillna(method="pad").dropna().set_index(['文章标题']).groupby(lambda x: x[:2]).apply(lambda x: x.apply(
-        lambda y: {1: lambda z: reduce(lcs, z), 2: lambda z: z[-1], None: lambda z: z.groupby(type).sum().values[0]}[
-            {'标题': 1, '日期': 2, '粉丝数': 2}.get(y.name)](y))).set_index(['标题'])
+        lambda y: {1: lambda z: reduce(lcs, z), 2: lambda z: z[-1], None: lambda z: z.groupby(type).sum().values[0]}
+        [{'标题': 1, '日期': 2, '粉丝数': 2}.get(y.name)](y))).set_index(['标题'])
     # 下面为上句的另一种表达方式
     # 用fillna填充nan
     # df=df.fillna(method="pad")
@@ -67,7 +67,7 @@ def analyse():
     df = df.T[old_field_count:]
 
     df.plot(kind='barh', figsize=(16, 9))
-    
+
     from pylab import mpl
     mpl.rcParams['font.sans-serif'] = ['SimHei']  # 指定默认字体
     mpl.rcParams['axes.unicode_minus'] = False  # 解决保存图像是负号'-'显示为方块的问题
