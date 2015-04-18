@@ -9,8 +9,8 @@ import sqlite3
 import re
 import sys
 
-chatdata = r"resource/小黑的情怀.mht"
-db_filename = r'resource/小黑的情怀.db'
+chatdata = r"resource/chat.mht"
+db_filename = r'resource/chat.db'
 schema_filename = r'schema.sql'
 
 # ##############################################################

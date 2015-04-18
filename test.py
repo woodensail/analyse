@@ -53,11 +53,17 @@ def t_s107():
 
     s107.analyse()
 
-def t_s108():
 
+def t_s108():
     import s108
 
     s108.analyse()
+
+
+def t_s109():
+    import s109
+
+    s109.analyse(name=u'黄师傅')
 
 
 if __name__ == '__main__':
@@ -68,4 +74,5 @@ if __name__ == '__main__':
     # t_s105()
     # t_s106()
     # t_s107()
-    t_s108()
+    # t_s108()
+    t_s109()
